@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const badge = require('./selectBadge')
+const pickedB = badge.license
 
 inquirer
   .prompt([
@@ -15,7 +17,7 @@ inquirer
     },
     {
       type: 'input',
-      message: 'Describe how to use this program',
+      message: 'Describe how to use this program.',
       name: 'usage',
     },
     {
@@ -41,17 +43,18 @@ inquirer
   
   ])
   .then((response) => {
-      response.usage
+      
     fs.writeFile('README.md',
-    `
+
+ `
+ ${pickedB}
+
 # ${response.projectName}
 
 ## Description
-
 This project lets you generate a professional README.
 
 ## Table of Contents
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -59,26 +62,25 @@ This project lets you generate a professional README.
 
 ## Installation
 
-What are the steps required to install your project?
+ ${response.install}
 
-${response.install}
 ## Usage
 
-${response.usage}
-Provide instructions and examples for use. Include screenshots as needed.
+ ${response.usage}
 
+![How it works.](assets/images/Screenshot.png)
 
 ## License
-${response.license}
+
+ ${response.license}
 
 ## Contact me
+How to reach me if you have any additional questions.
+
 [GitHub](https://github.com/${response.username})
 
-Email:  ${response.email}
-
-
+Email: ${response.email}
 ---
-
     
     
     `, (err) =>

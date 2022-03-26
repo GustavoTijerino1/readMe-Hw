@@ -1,12 +1,12 @@
 
-# ReadMe Generator
+ undefined
+
+# ReadMe Generator 
 
 ## Description
-
 This project lets you generate a professional README.
 
 ## Table of Contents
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -14,26 +14,25 @@ This project lets you generate a professional README.
 
 ## Installation
 
-What are the steps required to install your project?
+ I needed to use Node.js and install Inquirer.
 
-Install Node.js Inquirer
 ## Usage
 
- node index.js
-Provide instructions and examples for use. Include screenshots as needed.
+ You need to put 'node index.js' in your terminal.
 
+![How it works.](assets/images/Screenshot.png)
 
 ## License
-MIT License
+
+ MIT License
 
 ## Contact me
+How to reach me if you have any additional questions.
+
 [GitHub](https://github.com/GustavoTijerino1)
 
-Email:  busg26@gmail.com
-
-
+Email: busg26@gmail.com
 ---
-
     
     
     
