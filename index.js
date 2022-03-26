@@ -42,7 +42,7 @@ inquirer
   ])
   .then((response) => {
       response.usage
-    fs.writeFile('README_2.0.md',
+    fs.writeFile('README.md',
     `
 # ${response.projectName}
 
