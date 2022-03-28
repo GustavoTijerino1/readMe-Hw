@@ -1,9 +1,11 @@
+// Includes packages needed
 const inquirer = require('inquirer');
 const fs = require('fs');
 const badge = require('./selectBadge')
 const pickedB = badge.license
 
 inquirer
+// User's answers will be displayed in ReadME
   .prompt([
     {
       type: 'input',
@@ -42,12 +44,13 @@ inquirer
     
   
   ])
+  // Creates ReadME with the answers of the user
   .then((response) => {
       
     fs.writeFile('README.md',
 
  `
- ${pickedB}
+ ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # ${response.projectName}
 
@@ -69,6 +72,7 @@ This project lets you generate a professional README.
  ${response.usage}
 
 ![How it works.](assets/images/Screenshot.png)
+
 
 ## License
 
